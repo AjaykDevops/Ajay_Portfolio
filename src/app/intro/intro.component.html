@@ -1,0 +1,26 @@
+<div class="intro">
+  <!-- Background Stars -->
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <!-- Intro Text + Button Container -->
+  <div class="intro-content" [class.hide-content]="textAndBtnHidden">
+    <div class="intro-text">
+      <h1 class="hide">
+        <span class="text">Building Ideas That Matter</span>
+      </h1>
+      <h3 class="hide">
+        <span class="text">Design. Develop. Deliver.</span>
+      </h3>
+      <button class="btn" (click)="playTransition()">EXPLORE</button>
+    </div>
+  </div>
+
+  <div *ngIf="showLoader" class="loader-container">
+    <div class="sphere-core"></div>
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+  </div>
+</div>
