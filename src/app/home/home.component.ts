@@ -66,7 +66,11 @@ export class HomeComponent {
       this.router.navigate(['/about-detail']);
     }, 2000);
   }
-  goHome() {
+
+  navigateToHome(): void {
     this.router.navigate(['/intro']);
   }
+  // goHome() {
+  //   this.router.navigate(['/intro']);
+  // }
 }

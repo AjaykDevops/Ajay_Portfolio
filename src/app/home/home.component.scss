@@ -104,7 +104,7 @@
   }
 }
 
-.button {
+.btn {
   position: relative;
   display: inline-block;
   font-size: 1.2em;
@@ -137,7 +137,7 @@
   transition: width 0.5s ease;
 }
 
-.button:hover .hover-text {
+.btn:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px #37ff8b);
 }
