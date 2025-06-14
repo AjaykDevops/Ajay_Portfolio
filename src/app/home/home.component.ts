@@ -3,13 +3,14 @@ import { NgFor, NgIf } from '@angular/common';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import * as AOS from 'aos';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [NgFor, RouterModule, NgIf],
+  imports: [NgFor, RouterModule, NgIf, CommonModule],
 })
 export class HomeComponent {
   constructor(private router: Router) {
@@ -40,11 +41,28 @@ export class HomeComponent {
 
   projects = [
     {
-      title: '',
-      description: '',
-      technologies: ['', '', ''],
+      title: 'Portfolio',
+      shortDescription: 'Personal portfolio website',
+      description:
+        'A modern and interactive developer portfolio built with Angular and SCSS, showcasing my skills, projects, and contact information in a dark-themed UI.',
+      imageUrl: 'assets/portfolio_intro.jpeg',
+      technologies: ['Angular', 'TypeScript', 'CSS', 'HTML'],
+      link: 'https://ajaykdevops.github.io/Ajay_Portfolio', // example
+    },
+    {
+      title: 'Cinephile',
+      shortDescription: 'Movie discovery & wishlist app',
+      description:
+        'Cinephile is a movie explorer app built using Angular and Firebase. It integrates with the TMDB API to fetch trending movies, and allows users to manage a personalized wishlist with Google authentication.',
+      imageUrl: 'assets/Cinephile.png',
+      technologies: ['Angular', 'Firebase', 'TypeScript', 'SCSS'],
+      link: 'https://cinephile-84d38.web.app/', // your project link
     },
   ];
+
+  openExternalLink(link: string): void {
+    window.open(link, '_blank'); // opens in new tab
+  }
 
   ngOnInit() {
     AOS.init();

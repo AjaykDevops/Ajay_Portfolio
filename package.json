@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "ng build --configuration production --base-href=/Ajay_Portfolio/ && copy dist\\my-portfolio\\browser\\index.html dist\\my-portfolio\\browser\\404.html && npx angular-cli-ghpages --dir=dist/my-portfolio/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
